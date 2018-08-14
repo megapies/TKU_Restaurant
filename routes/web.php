@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/home', "RestaurantController@index");
+Route::get('/foods/{rest_id}', "FoodController@index");

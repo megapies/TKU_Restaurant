@@ -11,20 +11,11 @@ class Restaurant extends Model
     return [
       [
         "id" => 1,
-        "name" => "ร้านโลมา"
+        "name" => "ร้านโลมา",
+        "image" => "1.jpg",
+        "min_price" => 45,
+        "max_price" => 100,
       ],
-      [
-        "id" => 2,
-        "name" => "restaurant 2"
-      ],
-      [
-        "id" => 3,
-        "name" => "restaurant 3"
-      ],
-      [
-        "id" => 4,
-        "name" => "restaurant 4"
-      ]
     ];
   }
 }

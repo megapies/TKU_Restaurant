@@ -4,13 +4,23 @@
   <div class="container">
     <div class="row" style="background:red">
       <!-- BANNER -->
-      BANNER
     </div>
-    <img src="{{ asset('image/dog1.jpg')}}" alt="">
     <div class="row">
-      @foreach($restaurants as $restaurant)
-        <div class="col-4">
-          {{ $restaurant["name"] }}
+      <div class="col-12" style="text-align:center">
+        <h1>Restaurants</h1>
+      </div>
+    </div>
+    <div class="row">
+      @foreach($restaurants as $rest)
+        @php($image = $rest['image'])
+        @php($rest_id = $rest['id'])
+        <div class="card" style="width: 18rem; margin:10px">
+          <img class="card-img-top" src='{{ asset("image/restaurant/$image") }}'>
+          <div class="card-body">
+            <h5 class="card-title">{{ $rest["name"] }}</h5>
+            <p class="card-text">{{ $rest["min_price"] }} - {{ $rest["max_price"] }}$</p>
+            <a href='{{ url("/foods/$rest_id") }}' class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
       @endforeach
     </div>
