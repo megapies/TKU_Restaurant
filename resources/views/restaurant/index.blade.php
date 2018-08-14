@@ -6,8 +6,13 @@
       <!-- BANNER -->
       BANNER
     </div>
+    <img src="{{ asset('image/dog1.jpg')}}" alt="">
     <div class="row">
-      {{ json_encode($restaurants) }}
+      @foreach($restaurants as $restaurant)
+        <div class="col-4">
+          {{ $restaurant["name"] }}
+        </div>
+      @endforeach
     </div>
   </div>
 @endsection
